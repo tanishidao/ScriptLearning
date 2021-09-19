@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e3d29e52a0fc148980d5a788c0624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  juhuku: 
 --- !u!4 &434191463
 Transform:
   m_ObjectHideFlags: 0

@@ -5,37 +5,110 @@ using System.Linq;
 
 public class HomeWork3 : MonoBehaviour
 {
-    List<int> juhuku = new List<int>();
-    int[] Dices;
+    public List<int> juhuku = new List<int>();
+
+
+    /// //////
+
+    public List<int> Dices = new List<int>();
+
     int[] DicesProbability;
     void Start()
     {
 
         TyohukuHante();
         Dice();
+        List<int> juhuku = new List<int>(10);
+        List<int> Dices = new List<int>(10);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-
-
-    }
     public void TyohukuHante()
     {
-        List<int> juhuku = new List<int>(Random.Range(1, 10));
+        int Count1 = 0;
+        int Count2 = 0;
+        int Count3 = 0;
+        int Count4 = 0;
+        int Count5 = 0;
+        int Count6 = 0;
+        int Count7 = 0;
+        int Count8 = 0;
+        int Count9 = 0;
+        int Count10 = 0;
+        for (int j = 0; j < 10; j++)
+        {
+            juhuku.Insert(j, Random.Range(1, 10));
 
-        juhuku.Distinct().ToList(); //”í‚Á‚½‚çÁ‚·
 
-        Debug.Log(juhuku);
-        Debug.Log(juhuku.Distinct().ToList()); //Á‚µ‚½‚ç•\Ž¦
+            if (juhuku[j] == 1)
+            {
+                Count1++;
+            }
+
+            if (juhuku[j] == 2)
+            {
+                Count2++;
+            }
+
+            if (juhuku[j] == 3)
+            {
+                Count3++;
+            }
+
+            if (juhuku[j] == 4)
+            {
+                Count4++;
+            }
+
+            if (juhuku[j] == 5)
+            {
+                Count5++;
+            }
+
+            if (juhuku[j] == 6)
+            {
+                Count6++;
+            }
+
+            if (juhuku[j] == 7)
+            {
+                Count7++;
+            }
+
+            if (juhuku[j] == 8)
+            {
+                Count8++;
+            }
+            if (juhuku[j] == 9)
+            {
+                Count9++;
+            }
+            if (juhuku[j] == 10)
+            {
+                Count10++;
+            }
+
+        }
+        for (int i = 0; i < 10; i++)
+        {
+
+        }
+        Debug.Log(1 + "‚Ì”Žš‚Í" + Count1 + "‰ñ‚Å‚½");
+        Debug.Log(2 + "‚Ì”Žš‚Í" + Count2 + "‰ñ‚Å‚½");
+        Debug.Log(3 + "‚Ì”Žš‚Í" + Count3 + "‰ñ‚Å‚½");
+        Debug.Log(4 + "‚Ì”Žš‚Í" + Count4 + "‰ñ‚Å‚½");
+        Debug.Log(5 + "‚Ì”Žš‚Í" + Count5 + "‰ñ‚Å‚½");
+        Debug.Log(6 + "‚Ì”Žš‚Í" + Count6 + "‰ñ‚Å‚½");
+        Debug.Log(7 + "‚Ì”Žš‚Í" + Count7 + "‰ñ‚Å‚½");
+        Debug.Log(8 + "‚Ì”Žš‚Í" + Count8 + "‰ñ‚Å‚½");
+        Debug.Log(9 + "‚Ì”Žš‚Í" + Count9 + "‰ñ‚Å‚½");
+        Debug.Log(10 + "‚Ì”Žš‚Í" + Count10 + "‰ñ‚Å‚½");
+
+
     }
 
     public void Dice()
     {
-        Dices = new int[10];
-        DicesProbability = new int[6];
         int OneCount = 0;
         int TwoCount = 0;
         int ThreeCount = 0;
@@ -44,63 +117,48 @@ public class HomeWork3 : MonoBehaviour
         int SixCount = 0;
         for (int i = 0; i < 10; i++)
         {
-            Dices[0] = Random.Range(1, 6);
-            Dices[1] = Random.Range(1, 6);
-            Dices[2] = Random.Range(1, 6);
-            Dices[3] = Random.Range(1, 6);
-            Dices[4] = Random.Range(1, 6);
-            Dices[5] = Random.Range(1, 6);
-            Dices[6] = Random.Range(1, 6);
-            Dices[7] = Random.Range(1, 6);
-            Dices[8] = Random.Range(1, 6);
-            Dices[9] = Random.Range(1, 6);
-           
-         
+            Dices.Insert(i, Random.Range(1, 6));
+            if (Dices[i] == 1)
+            {
+                OneCount++;
+            }
+            if (Dices[i] == 2)
+            {
+                TwoCount++;
+            }
+            if (Dices[i] == 3)
+            {
+                ThreeCount++;
+            }
+            if (Dices[i] == 4)
+            {
+                FourCount++;
+            }
+            if (Dices[i] == 5)
+            {
+                FiveCount++;
+            }
+            if (Dices[i] == 6)
+            {
+                SixCount++;
+            }
+            
         }
-       
+        
+        TwoCount = TwoCount / 10;
+        ThreeCount = ThreeCount / 10;
+        FourCount = FourCount / 10;
+        FiveCount = FiveCount / 10;
+        SixCount = SixCount / 10;
 
-       
-        if (Dices.Length == 1)
-        {
-            
-            OneCount++;
-        }
-        if (Dices.Length == 2)
-        {
-            
-            TwoCount++;
-        }
-        if (Dices.Length == 3)
-        {
-            
-            ThreeCount++;
-        }
-        if (Dices.Length == 4)
-        {
-            
-            FourCount++;
-        }
-        if (Dices.Length == 5)
-        {
-            
-            FiveCount++;
-        } if (Dices.Length == 6)
-        {
-            
-            SixCount++;
-        }
-        DicesProbability[0] = OneCount / 10; //if Dices no 5 nokazu / 6
-        DicesProbability[1] = TwoCount / 10;
-        DicesProbability[2] = ThreeCount / 10;
-        DicesProbability[3] = FourCount / 10;
-        DicesProbability[4] = FiveCount / 10;
-        DicesProbability[5] = SixCount / 10;
-        Debug.Log(DicesProbability[0]);
-        Debug.Log(DicesProbability[1]);
-        Debug.Log(DicesProbability[2]);
-        Debug.Log(DicesProbability[3]);
-        Debug.Log(DicesProbability[4]);
-        Debug.Log(DicesProbability[5]);
+        Debug.Log("1‚Ì–Ú‚Í" + OneCount / 10);
+        Debug.Log("2‚Ì–Ú‚Í" + TwoCount);
+        Debug.Log("3‚Ì–Ú‚Í" + ThreeCount);
+        Debug.Log("4‚Ì–Ú‚Í" + FourCount);
+        Debug.Log("5‚Ì–Ú‚Í" + FiveCount);
+        Debug.Log("6‚Ì–Ú‚Í" + SixCount);
+
+
 
     }
     void Notuse()

@@ -31,7 +31,7 @@ public class Homework1 : MonoBehaviour
             Debug.Log(Number + "‚±‚Ì”š‚ÍŠï”‚Å‚·");
 
         }
-        if (Number % 2 == 0)//—]‚è‚È‚µ
+        else//—]‚è‚È‚µ
         {
             Debug.Log(Number + "‚±‚Ì”š‚Í‹ô”‚Å‚·");
         }
