@@ -35,6 +35,13 @@ public class HomeWork3 : MonoBehaviour
     public void Dice()
     {
         Dices = new int[10];
+        DicesProbability = new int[6];
+        int OneCount = 0;
+        int TwoCount = 0;
+        int ThreeCount = 0;
+        int FourCount = 0;
+        int FiveCount = 0;
+        int SixCount = 0;
         for (int i = 0; i < 10; i++)
         {
             Dices[0] = Random.Range(1, 6);
@@ -47,17 +54,47 @@ public class HomeWork3 : MonoBehaviour
             Dices[7] = Random.Range(1, 6);
             Dices[8] = Random.Range(1, 6);
             Dices[9] = Random.Range(1, 6);
-            Dices[10] = Random.Range(1, 6);
+           
          
         }
-        DicesProbability = new int[6];
+       
 
-        DicesProbability[0] = Dices.Length / 10; //if Dices no 5 nokazu / 6
-        DicesProbability[1] = Dices.Length; //if Dices no 5 nokazu / 6
-        DicesProbability[2] = Dices.Length / 10; //if Dices no 5 nokazu / 6
-        DicesProbability[3] = Dices.Length / 10; //if Dices no 5 nokazu / 6
-        DicesProbability[4] = Dices.Length / 10; //if Dices no 5 nokazu / 6
-        DicesProbability[5] = Dices.Length / 10; //if Dices no 5 nokazu / 6
+       
+        if (Dices.Length == 1)
+        {
+            
+            OneCount++;
+        }
+        if (Dices.Length == 2)
+        {
+            
+            TwoCount++;
+        }
+        if (Dices.Length == 3)
+        {
+            
+            ThreeCount++;
+        }
+        if (Dices.Length == 4)
+        {
+            
+            FourCount++;
+        }
+        if (Dices.Length == 5)
+        {
+            
+            FiveCount++;
+        } if (Dices.Length == 6)
+        {
+            
+            SixCount++;
+        }
+        DicesProbability[0] = OneCount / 10; //if Dices no 5 nokazu / 6
+        DicesProbability[1] = TwoCount / 10;
+        DicesProbability[2] = ThreeCount / 10;
+        DicesProbability[3] = FourCount / 10;
+        DicesProbability[4] = FiveCount / 10;
+        DicesProbability[5] = SixCount / 10;
         Debug.Log(DicesProbability[0]);
         Debug.Log(DicesProbability[1]);
         Debug.Log(DicesProbability[2]);
