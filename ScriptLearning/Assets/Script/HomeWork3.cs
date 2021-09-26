@@ -15,11 +15,15 @@ public class HomeWork3 : MonoBehaviour
     int[] DicesProbability;
     void Start()
     {
-
-        TyohukuHante();
-        Dice();
         List<int> juhuku = new List<int>(10);
         List<int> Dices = new List<int>(10);
+        TyohukuHante();
+        Dice();
+
+    }
+    private void Update()
+    {
+
     }
 
 
@@ -89,10 +93,7 @@ public class HomeWork3 : MonoBehaviour
             }
 
         }
-        for (int i = 0; i < 10; i++)
-        {
 
-        }
         Debug.Log(1 + "‚Ì”Žš‚Í" + Count1 + "‰ñ‚Å‚½");
         Debug.Log(2 + "‚Ì”Žš‚Í" + Count2 + "‰ñ‚Å‚½");
         Debug.Log(3 + "‚Ì”Žš‚Í" + Count3 + "‰ñ‚Å‚½");
@@ -109,54 +110,52 @@ public class HomeWork3 : MonoBehaviour
 
     public void Dice()
     {
-        int OneCount = 0;
-        int TwoCount = 0;
-        int ThreeCount = 0;
-        int FourCount = 0;
-        int FiveCount = 0;
-        int SixCount = 0;
+        float OneCount = 0;
+        float TwoCount = 0;
+        float ThreeCount = 0;
+        float FourCount = 0;
+        float FiveCount = 0;
+        float SixCount = 0;
         for (int i = 0; i < 10; i++)
         {
             Dices.Insert(i, Random.Range(1, 6));
             if (Dices[i] == 1)
             {
-                OneCount++;
+                OneCount += 0.1f;
             }
             if (Dices[i] == 2)
             {
-                TwoCount++;
+                TwoCount+= 0.1f;
             }
             if (Dices[i] == 3)
             {
-                ThreeCount++;
+                ThreeCount+= 0.1f;
             }
             if (Dices[i] == 4)
             {
-                FourCount++;
+                FourCount+= 0.1f;
             }
             if (Dices[i] == 5)
             {
-                FiveCount++;
+                FiveCount += 0.1f;
             }
             if (Dices[i] == 6)
             {
-                SixCount++;
+                SixCount += 0.1f;
             }
-            
+            if (i >= 9)
+            {
+                
+            }
         }
-        
-        TwoCount = TwoCount / 10;
-        ThreeCount = ThreeCount / 10;
-        FourCount = FourCount / 10;
-        FiveCount = FiveCount / 10;
-        SixCount = SixCount / 10;
 
-        Debug.Log("1‚Ì–Ú‚Í" + OneCount / 10);
-        Debug.Log("2‚Ì–Ú‚Í" + TwoCount);
-        Debug.Log("3‚Ì–Ú‚Í" + ThreeCount);
-        Debug.Log("4‚Ì–Ú‚Í" + FourCount);
-        Debug.Log("5‚Ì–Ú‚Í" + FiveCount);
-        Debug.Log("6‚Ì–Ú‚Í" + SixCount);
+
+        Debug.Log("1‚Ì–Ú‚Í" + OneCount.ToString("P"));
+        Debug.Log("2‚Ì–Ú‚Í" + TwoCount.ToString("P"));
+        Debug.Log("3‚Ì–Ú‚Í" + ThreeCount.ToString("P"));
+        Debug.Log("4‚Ì–Ú‚Í" + FourCount.ToString("P"));
+        Debug.Log("5‚Ì–Ú‚Í" + FiveCount.ToString("P"));
+        Debug.Log("6‚Ì–Ú‚Í" + SixCount.ToString("P"));
 
 
 

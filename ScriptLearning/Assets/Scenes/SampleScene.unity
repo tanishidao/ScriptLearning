@@ -211,8 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b147b1abdd57b48449225085e77c8324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 100
-  Damage: 0.04
 --- !u!1 &174613414
 GameObject:
   m_ObjectHideFlags: 0

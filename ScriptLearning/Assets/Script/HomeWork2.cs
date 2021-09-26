@@ -46,6 +46,10 @@ public class HomeWork2 : MonoBehaviour
                 Sec = Sec - 60;
                 
             }
+            else
+            {
+                EndRoop = false;
+            }
             if (Min >= 60)
             {
                 Hour++;
@@ -56,10 +60,7 @@ public class HomeWork2 : MonoBehaviour
             {
                 Hour = Hour - 24;
             }
-            if(Sec < 60)
-            {
-                EndRoop = false;
-            }
+            
             
        
         
